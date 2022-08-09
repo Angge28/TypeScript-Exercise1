@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>var exports = {"__esModule":true};</script>
+    <script src = "./index.js"> </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City Directory</title>
 </head>
 <body>
-    <form>
-        <div>
-            <label>City Name: </label>
-            <input type="text" id = "name_of_city"><br><br>
-        
-            <label>Country: </label>
-            <input type="text" id = "country"><br><br>
-        
-            <label>Population: </label>
-            <input type="number" id = "population"><br><br>
-       </div>
-        
-    </form>
-    <div>
-        <button id = "saveBtn">Save</button>
+    <div id="create-form" style="text-align: center;">
+        <label>CITY DIRECTORY</label><br><br>
+    
+        <label for="city">City Name</label>
+        <input type="text" id="city" required="true"><br><br>
+    
+        <label for="country">Country</label>
+        <input type="text" id="country" required="true"><br><br>
+    
+        <label for="population">Population</label>
+        <input type="number" id="population" min="1" required="true"><br><br>
+    
+        <button onclick="addData(
+            [document.getElementById('city').value,
+            document.getElementById('country').value,
+            document.getElementById('population').value])">
+            Save
+        </button>
     </div>
-    <br><br>
-    <form >
-        <input type="text" id = "searchText"><br><br>       
-    </form>
-        <button id = "searchBtn">Search</button>
-    <div>
-        <h1>City Info</h1>
+    <hr>
+    
+    <div id="list" style="text-align: center;">
+        <input type="text" name="search" id="search">
+        <button name="search_btn">Search</button><br><br>
+        <label> City Info </label><br><br>
+        <div id="my_list"></div>
     </div>
-    <div id = "myList">
-        
-
-    </div>
-
-    <script>var exports = {"__esModule":true};</script>
-    <script src = "./index.js"> </script>
     
 </body>
 </html> 
