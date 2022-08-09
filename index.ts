@@ -1,12 +1,12 @@
 var cityList: any[] = [];
 
-export const saveInfo = (info: any[]) => {
-    cityList.push(info);
-    displayInfo();
+export const addData = (data: any[]) => {
+    cityList.push(data);
+    displayData();
     localStorage.setItem("Data", JSON.stringify(cityList));
 }
 
-export const displayInfo = () => {
+export const displayData = () => {
     let list = document.getElementById("my_list");
     if(list) {
         while(list.hasChildNodes() && list.firstChild){
